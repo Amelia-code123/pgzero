@@ -10,10 +10,16 @@ def draw():
     width=300
     height=150
     for i in range(20):
+        r=random.randint(0,255)
+        g=random.randint(0,255)
+        b=random.randint(0,255)
         rect=Rect((0,0),(width,height))
         rect.center=150,150
         screen.draw.rect(rect,(r,g,b))
         width-=10
         height+=10
+
+def update():
+    pass
 
 pgzrun.go()
