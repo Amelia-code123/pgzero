@@ -18,14 +18,20 @@ def flowers():
     start=time.time()
 
 def draw():
+    global end
     screen.blit("grass.jpg", (0,0))
     count=1
     for i in all:
         i.draw()
-        screen.draw.text(str(count),(i.pos[0],i.pos[1]))
+        screen.draw.text(str(count),(i.pos[0],i.pos[1]),color="black")
         count=count+1
     for x in lines:
-        screen.draw.line(x[0],x[1],"pink",width=5)
+        screen.draw.line(x[0],x[1],"pink")
+    if next<10:
+        end=time.time()-start
+        screen.draw.text(str(round(end,1)),(20,20),fontsize=30)
+    else:
+        screen.draw.text(str(round(end,1)),(20,20),fontsize=30)   
 
 def update():
     pass
@@ -37,6 +43,10 @@ def on_mouse_down(pos):
             if next:
                 lines.append((all[next-1].pos, all[next].pos))
             next=next+1
+        else:
+            lines=[]
+            next=0
+
 flowers()
 
 pgzrun.go()
