@@ -38,7 +38,8 @@ def order(extra):
     for index,item in enumerate(empty):
         item.x=(index+1)*gap
         item.y=0
-        animate(item,duration=speed-current,on_finished=gameover,y=HEIGHT)
+        if current<=levels:
+            animate(item,duration=speed-current,y=HEIGHT)
     return empty
 
 def gameover():
