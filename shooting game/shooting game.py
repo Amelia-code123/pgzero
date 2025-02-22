@@ -24,11 +24,17 @@ def draw():
     screen.blit("background.jpg", (0,0))
     ship.draw()
     alien.draw()
+    screen.draw.text("Score:"+str(score),center=(50,50))
     for i in bullets:
         i.draw()
 
 def update():
+    global score
     pass
+    alien.y+=3
+    if alien.y>600:
+        alien.y=0
+        alien.x=random.randint(0,800)
     if keyboard.left:
         ship.x-=speed
     if keyboard.right:
@@ -40,5 +46,6 @@ def update():
             alien.y=50
             bullets.remove(i)
             sounds.eep.play()
+            score=score+1
 
 pgzrun.go()
