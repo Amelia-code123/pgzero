@@ -1,0 +1,27 @@
+x={}
+while True:
+    print("OPTIONS: \n1.Insert \n2.Display all capitals \n3.Display all countries \n4.Get capital \n5.Delete \n6.Exit")
+    choice=int(input("Select an option: "))
+
+    if choice==1:
+        key=input("Enter a country: ")
+        value=input("Enter the capital: ")
+        x[key]=value
+
+    elif choice==2:
+        print(x.values())
+
+    elif choice==3:
+        print(x.keys())
+
+    elif choice==4:
+        c=input("Enter a country: ")
+        print(x[c])
+
+    elif choice==5:
+        d=input("Enter a country: ")
+        del x[d]
+
+    else:
+        print("Thank you for playing")
+        break
