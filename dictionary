@@ -1,0 +1,24 @@
+x={"name":"Amelia","age":13,"year":8,"sports":"netball"}
+print(x)
+print(x["name"])
+print(x["sports"])
+print(x.get("height",1))
+
+#adding and updating
+x["country"]="england"
+print(x)
+x["sports"]="swimming"
+print(x)
+
+#removing
+del x["year"]
+x.pop("country")
+print(x)
+
+#clearing
+#x.clear()
+
+print(x.keys())
+print(x.values())
+print(x.items())
+print(x)
