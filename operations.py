@@ -1,0 +1,5 @@
+s=set(input("Enter the set elements separated by a space: "))
+ss=set(input("Enter the second set elements separated by a space: "))
+print(s)
+print(ss)
+print("MENU: \n 1.Union \n 2.Intersection \n 3.Difference \n 4.Symetric Difference")
